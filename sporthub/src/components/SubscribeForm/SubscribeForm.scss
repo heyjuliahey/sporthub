@@ -1,0 +1,96 @@
+.subscribe {
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #111;
+  }
+
+  .subscribe-box {
+    background: #000;
+    padding: 25px 20px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    @media (min-width: 1201px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 30px;
+      gap: 15px;
+    }
+
+    @media (min-width: 641px) and (max-width: 1200px) {
+      padding: 25px 20px;
+    }
+
+    input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #fff;
+      color: #fff;
+      padding: 8px 0;
+      font-size: 0.9rem;
+      outline: none;
+
+      @media (min-width: 1201px) {
+        flex: 1;
+      }
+
+      &::placeholder {
+        color: #ccc;
+      }
+    }
+
+    button {
+      background: #e3000f;
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      align-self: center;
+      white-space: nowrap;
+
+      @media (min-width: 1201px) {
+        align-self: auto;
+      }
+
+      &:hover {
+        background: #b5000d;
+      }
+    }
+  }
+
+  &-error {
+    color: #ff4444;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    animation: fadeIn 0.3s ease;
+  }
+
+  &-success {
+    color: #4caf50;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    animation: fadeIn 0.3s ease;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

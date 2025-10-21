@@ -1,0 +1,133 @@
+.header {
+  width: 100%;
+  color: white;
+  position: absolute; 
+  top: 0;           
+  left: 0;          
+  z-index: 1000;      
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: relative;
+    z-index: 1002;
+
+    @media (max-width: 768px) {
+      padding: 15px 20px;
+    }
+  }
+
+  &__logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    z-index: 1003;
+
+    .red {
+      color: #e3000f;
+    }
+  }
+
+  &__burger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1003;
+    padding: 5px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__nav {
+    @media (max-width: 768px) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      max-width: 300px;
+      height: 100vh;
+      background: #1a1a1a;
+      transition: right 0.3s ease-in-out;
+      z-index: 1001;
+      padding-top: 80px;
+
+      &--open {
+        right: 0;
+      }
+    }
+
+    ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 0;
+        padding: 20px;
+      }
+
+      li {
+        @media (max-width: 768px) {
+          border-bottom: 1px solid #333;
+        }
+
+        a {
+          color: #a0a0a0;
+          cursor: pointer;
+          transition: color 0.3s, padding 0.3s;
+          display: block;
+          text-decoration: none;
+
+          @media (max-width: 768px) {
+            color: white;
+            padding: 15px 10px;
+            font-size: 1.1rem;
+          }
+
+          &:hover {
+            color: white;
+
+            @media (max-width: 768px) {
+              color: #e3000f;
+              padding-left: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__overlay {
+    @media (max-width: 768px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      animation: fadeIn 0.3s ease;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

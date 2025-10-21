@@ -1,0 +1,31 @@
+.socials {
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #111;
+  }
+
+  .socials-box {
+    background: #e3000f;
+    padding: 25px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    
+    height: 180px;
+
+    svg {
+      font-size: 1.4rem;
+      color: #fff;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

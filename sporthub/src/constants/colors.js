@@ -1,0 +1,15 @@
+export const COLORS = {
+  PRIMARY_RED: '#e3000f',
+  DARK_RED: '#d31212',
+  FOOTER_RED: '#c30000',
+  WHITE: '#ffffff',
+  BLACK: '#000000',
+  DARK_GRAY: '#1a1a1a',
+  MEDIUM_GRAY: '#333',
+  LIGHT_GRAY: '#a0a0a0',
+  VERY_LIGHT_GRAY: '#e5e5e5',
+  TEXT_PRIMARY: '#333',
+  TEXT_SECONDARY: '#555',
+  TEXT_TERTIARY: '#777',
+  TEXT_TAG: '#776',
+};

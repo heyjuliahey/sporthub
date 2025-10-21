@@ -1,0 +1,63 @@
+.news-section {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative; 
+  overflow: hidden; 
+
+  .news-section__background {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0; 
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+      z-index: 1; /* Place it above the background image but below text */
+    }
+  }
+
+  .news-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+    position: relative; 
+    z-index: 2; 
+    padding: 50px;
+    text-align: left;
+    max-width: 900px;
+    width: 100%;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hashtag {
+      display: block;
+      color: #b3b3b3;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      max-width: 600px;
+      text-align: left;
+    }
+  }
+}
